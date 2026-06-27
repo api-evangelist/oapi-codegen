@@ -45,7 +45,7 @@ apis:
         url: https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2/pkg/codegen
       - type: ConfigurationSchema
         url: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/v2.7.0/configuration-schema.json
-      - type: Releases
+      - type: ReleaseNotes
         url: https://github.com/oapi-codegen/oapi-codegen/releases
       - type: Issues
         url: https://github.com/oapi-codegen/oapi-codegen/issues
