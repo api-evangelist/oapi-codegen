@@ -30,7 +30,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/apis.yml
 created: '2026-03-25'
-modified: '2026-04-28'
+modified: '2026-08-06'
 specificationVersion: '0.19'
 apis:
   - aid: oapi-codegen:oapi-codegen
@@ -56,7 +56,11 @@ apis:
       - type: GoDoc
         url: https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2/pkg/codegen
       - type: ConfigurationSchema
-        url: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/v2.7.0/configuration-schema.json
+        url: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/v2.8.0/configuration-schema.json
+      - type: JSONSchema
+        url: json-schema/oapi-codegen-configuration-schema.json
+      - type: CLI
+        url: cli/oapi-codegen-cli.yml
       - type: ReleaseNotes
         url: https://github.com/oapi-codegen/oapi-codegen/releases
       - type: Issues
@@ -68,10 +72,51 @@ common:
     url: https://github.com/oapi-codegen/oapi-codegen
   - type: Documentation
     url: https://github.com/oapi-codegen/oapi-codegen#readme
-  - type: GitHubOrg
+  - type: APIReference
+    url: https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2/pkg/codegen
+  - type: GettingStarted
+    url: https://github.com/oapi-codegen/oapi-codegen#install
+  - type: GitHubOrganization
     url: https://github.com/oapi-codegen
   - type: GoDoc
     url: https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2
+  - type: Support
+    url: https://github.com/oapi-codegen/oapi-codegen/discussions
+  - type: Governance
+    url: https://github.com/oapi-codegen/governance
+  - type: License
+    url: https://github.com/oapi-codegen/oapi-codegen/blob/main/LICENSE
+  - type: ChangeLog
+    url: changelog/oapi-codegen-changelog.yml
+  - type: ReleaseNotes
+    url: https://github.com/oapi-codegen/oapi-codegen/releases
+  - type: Lifecycle
+    url: lifecycle/oapi-codegen-lifecycle.yml
+  - type: Deprecation
+    url: https://github.com/oapi-codegen/oapi-codegen#backwards-compatibility
+  - type: Packages
+    url: packages/oapi-codegen-packages.yml
+  - type: SDKs
+    url: packages/oapi-codegen-packages.yml
+  - type: CLI
+    url: cli/oapi-codegen-cli.yml
+  - type: JSONSchema
+    url: json-schema/oapi-codegen-configuration-schema.json
+  - type: Vocabulary
+    url: vocabulary/oapi-codegen-openapi-extensions.yml
+  - type: Conformance
+    url: conformance/oapi-codegen-conformance.yml
+  - type: VulnerabilityDisclosure
+    url: security/oapi-codegen-vulnerability-disclosure.yml
+  - type: Security
+    url: https://github.com/oapi-codegen/.github/blob/main/SECURITY.md
+  - type: LLMsTxt
+    url: llms/oapi-codegen-llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-06'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
