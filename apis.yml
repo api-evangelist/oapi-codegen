@@ -31,7 +31,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/apis.yml
 created: '2026-03-25'
 modified: '2026-08-06'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: oapi-codegen:oapi-codegen
     name: Oapi-Codegen
