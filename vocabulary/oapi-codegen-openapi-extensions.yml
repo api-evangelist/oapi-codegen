@@ -1,0 +1,74 @@
+generated: '2026-08-06'
+method: searched
+source: https://github.com/oapi-codegen/oapi-codegen/blob/main/docs/extensions.md
+name: oapi-codegen OpenAPI specification extensions
+summary: >-
+  The vendor extension vocabulary oapi-codegen reads out of an OpenAPI 3.0/3.1
+  document to steer Go code generation. These are the `x-` keys a spec author adds
+  to schemas, properties, and types so the generator emits the Go shape they want.
+  Captured verbatim from the project's published extensions reference.
+version: v2.8.0
+applies_to: OpenAPI 3.0 / 3.1 documents consumed by oapi-codegen
+terms:
+  - term: x-go-type
+    scope: schema
+    description: >-
+      Override the Go type oapi-codegen determined the generated type should be.
+  - term: x-go-type-import
+    scope: schema
+    description: >-
+      Companion to x-go-type — declare the package import required by the
+      overridden type (name + path).
+  - term: x-go-type-skip-optional-pointer
+    scope: schema / property
+    description: >-
+      Do not generate a pointer type for an optional struct field. The global
+      equivalent is output-options.prefer-skip-optional-pointer.
+  - term: x-go-name
+    scope: schema / property
+    description: Override the generated Go name of a field or a type.
+  - term: x-go-type-name
+    scope: schema
+    description: >-
+      Override the generated Go name of a type only (unlike x-go-name, which also
+      applies to struct fields).
+  - term: x-omitempty
+    scope: property
+    description: >-
+      Force the JSON struct tag `omitempty` onto a field that would not get one by
+      default (e.g. a required field).
+  - term: x-omitzero
+    scope: property
+    description: >-
+      Force the JSON struct tag `omitzero` onto a field. Requires Go 1.24+.
+  - term: x-go-json-ignore
+    scope: property
+    description: Omit the field from JSON marshaling/unmarshaling.
+  - term: x-oapi-codegen-extra-tags
+    scope: property
+    description: >-
+      Emit arbitrary additional struct tags on the generated field (validation,
+      database, logging tags, etc.).
+  - term: x-enum-varnames
+    scope: schema (enum)
+    description: Override the generated Go variable names for enum constants.
+  - term: x-enumNames
+    scope: schema (enum)
+    description: Alias of x-enum-varnames.
+  - term: x-deprecated-reason
+    scope: schema
+    description: >-
+      Add a GoDoc `Deprecated:` warning to the generated type, carrying the reason.
+  - term: x-order
+    scope: property
+    description: >-
+      Explicitly order generated struct fields. 1-indexed; `x-order: 0` is invalid.
+  - term: x-oapi-codegen-only-honour-go-name
+    scope: schema / property
+    description: >-
+      Only honour x-go-name when generating field names, bypassing the generator's
+      clash-avoidance and Go-identifier rewriting.
+x-evidence:
+  fetched: '2026-08-06'
+  url: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/main/docs/extensions.md
+  http_status: 200

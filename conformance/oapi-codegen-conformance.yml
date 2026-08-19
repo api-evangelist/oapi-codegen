@@ -1,0 +1,81 @@
+generated: '2026-08-06'
+method: searched
+source: https://github.com/oapi-codegen/oapi-codegen#readme
+scope: >-
+  oapi-codegen is a specification CONSUMER, not an API provider. Conformance below
+  records the standards the generator reads, implements, or publishes against — not
+  the security posture of a running service. There is no hosted endpoint, so the
+  transport/authorization standards families (OAuth 2.0, OIDC, FAPI, mTLS, RFC 9457
+  problem details, RFC 8594 sunset) are not applicable rather than failed.
+standards:
+  - id: openapi-3.0
+    conforms: true
+    role: consumer
+    evidence: >-
+      Core supported input format since the project's first release; documented in
+      the README and exercised by the examples directory.
+  - id: openapi-3.1
+    conforms: true
+    role: consumer
+    since: v2.8.0
+    evidence: >-
+      "Initial OpenAPI 3.1 support" — v2.8.0 release notes; required the upgrade to
+      a kin-openapi release with 3.1 support and Go 1.25.
+    note: described by the project as initial support, not full 3.1 coverage
+  - id: openapi-overlay-1.0.0
+    conforms: true
+    role: consumer
+    since: v2.4.0
+    evidence: >-
+      output-options.overlay.path applies an OpenAPI Overlay 1.0.0 document to the
+      input specification before generation; documented under "Modifying the input
+      OpenAPI Specification (with OpenAPI Overlay)".
+  - id: json-schema-draft-07
+    conforms: true
+    role: publisher
+    evidence: >-
+      configuration-schema.json declares $schema
+      http://json-schema.org/draft-07/schema# and is published per release tag for
+      LSP-driven editor validation.
+    artifact: json-schema/oapi-codegen-configuration-schema.json
+  - id: openapi-webhooks-callbacks
+    conforms: true
+    role: consumer
+    since: v2.8.0
+    evidence: v2.8.0 release notes — webhooks and callbacks code generation
+  - id: semver-2.0.0
+    conforms: true
+    role: publisher
+    evidence: >-
+      "as a project that's using a stable API per SemVer" — README, Backwards
+      compatibility; releases are v-prefixed SemVer tags on the Go module proxy.
+  - id: go-modules
+    conforms: true
+    role: publisher
+    evidence: all 11 first-party libraries resolve on proxy.golang.org
+  - id: spdx-apache-2.0
+    conforms: true
+    role: publisher
+    evidence: repository license is Apache-2.0 (SPDX Apache-2.0)
+  - id: oauth2
+    conforms: false
+    applicable: false
+    note: no hosted API surface; generated servers delegate auth to the consumer
+  - id: rfc9457-problem-details
+    conforms: false
+    applicable: false
+    note: no hosted API surface
+compliance_program:
+  published: false
+  certifications: []
+  note: >-
+    No SOC 2 / ISO 27001 / PCI / HIPAA / FedRAMP posture is published — expected for
+    a volunteer-maintained open source library with no hosted service. Recorded as
+    absent, not as a failure.
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+    - url: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/main/README.md
+      http_status: 200
+    - url: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/v2.8.0/configuration-schema.json
+      http_status: 200

@@ -1,0 +1,83 @@
+generated: '2026-08-06'
+method: searched
+source: https://github.com/oapi-codegen/oapi-codegen/releases
+scheme: semver
+current_version: v2.8.0
+current_released: '2026-07-17'
+release_channel: GitHub Releases (annotated tags, hand-written notes + auto-generated changelog)
+policy:
+  url: https://github.com/oapi-codegen/oapi-codegen#backwards-compatibility
+  summary: >-
+    SemVer applies primarily to the generated code. Breaking changes are avoided
+    where possible and, where unavoidable, are gated behind `compatibility:`
+    options that restore the previous behaviour. The CLI and configuration file
+    format are classed as stable; the importable pkg/ surface beyond Generate +
+    Configuration, and template overrides, are explicitly unstable. A security
+    vulnerability may override the compatibility promise.
+notes: Recent window only — the live releases page is the source of truth.
+entries:
+  - version: v2.8.0
+    date: '2026-07-17'
+    breaking: true
+    title: 'v2.8.0: OpenAPI 3.1, fewer assumptions, and a giant bug hunt'
+    highlights:
+      - Initial OpenAPI 3.1 support
+      - Go 1.25 now required (needed for a kin-openapi with 3.1 support)
+      - Requires github.com/oapi-codegen/runtime v1.6.0+ for generated code
+      - Trailing-slash routes on the net/http server no longer act as catch-alls
+      - Webhooks and callbacks support
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.8.0
+  - version: v2.7.2
+    date: '2026-07-07'
+    breaking: false
+    title: More fixes for code injection issues
+    highlights:
+      - Further hardening against Go code injection from untrusted OpenAPI specs
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.7.2
+  - version: v2.7.1
+    date: '2026-06-05'
+    breaking: false
+    title: Security fix for Go code injection
+    security_release: true
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.7.1
+  - version: v2.7.0
+    date: '2026-05-01'
+    breaking: true
+    title: 'v2.7.0: Squashing bugs, many bugs (and adding some features)'
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.7.0
+  - version: v2.6.0
+    date: '2026-02-27'
+    breaking: false
+    title: 'v2.6.0: 7th anniversary release'
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.6.0
+  - version: v2.5.1
+    date: '2025-11-01'
+    breaking: false
+    title: Fix a couple of regressions from v2.5.0
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.5.1
+  - version: v2.5.0
+    date: '2025-07-15'
+    breaking: true
+    title: >-
+      No more optional pointers (optionally), omitzero, better control over
+      initialisms
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.5.0
+  - version: v2.4.1
+    date: '2024-09-28'
+    breaking: false
+    title: A couple of post-release fixes
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.4.1
+  - version: v2.4.0
+    date: '2024-09-20'
+    breaking: true
+    title: OpenAPI Overlay, improved import-mapping functionality
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.4.0
+  - version: v2.3.0
+    date: '2024-06-06'
+    breaking: false
+    title: Updates related to repository move
+    url: https://github.com/oapi-codegen/oapi-codegen/releases/tag/v2.3.0
+x-evidence:
+  fetched: '2026-08-06'
+  url: https://api.github.com/repos/oapi-codegen/oapi-codegen/releases
+  http_status: 200

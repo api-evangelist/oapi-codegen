@@ -1,0 +1,132 @@
+generated: '2026-08-06'
+method: searched
+source: https://github.com/oapi-codegen/oapi-codegen/blob/v2.8.0/cmd/oapi-codegen/oapi-codegen.go
+docs:
+  - https://github.com/oapi-codegen/oapi-codegen#usage
+  - https://github.com/oapi-codegen/oapi-codegen/blob/main/docs/configuration.md
+name: oapi-codegen
+version: v2.8.0
+summary: >-
+  oapi-codegen is a single-binary Go CLI that reads an OpenAPI 3.0 or 3.1 document
+  and emits Go types, HTTP clients, and server boilerplate for a chosen router.
+  Its primary interface is a YAML configuration file (validated by a published
+  JSON Schema); command-line flags are retained for backward compatibility only
+  and are documented by the project as deprecated.
+install:
+  - method: go-tool
+    command: go get -tool github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen
+    note: recommended — tracks the generator as a source dependency in go.mod
+  - method: go-install
+    command: go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
+  - method: go-generate
+    command: '//go:generate go tool oapi-codegen -config cfg.yaml ../../api.yaml'
+invocation: oapi-codegen [flags] <openapi-spec-file-or-url>
+configuration:
+  primary_interface: yaml-config-file
+  schema: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/v2.8.0/configuration-schema.json
+  schema_draft: draft-07
+  lsp_hint: '# yaml-language-server: $schema=<configuration-schema.json URL>'
+  reference: https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2/pkg/codegen#Configuration
+  top_level_keys:
+    - key: package
+      required: true
+      description: Go package name for generated code
+    - key: generate
+      description: which artifacts/servers to generate (one server type at a time)
+    - key: compatibility
+      description: backward-compatibility switches preserving pre-fix output
+    - key: output-options
+      description: naming, tags, type mapping, struct tags, content types, overlay
+    - key: import-mapping
+      description: external $ref to Go package mapping for multi-package specs
+    - key: additional-imports
+      description: extra Go imports injected into generated code
+    - key: output
+      description: output file path
+flags:
+  status: deprecated-but-maintained
+  note: >-
+    "While some command line options are supported, they should be considered
+    deprecated, we just maintain them for backward compatibility, but we're not
+    extending them." — project README.
+  items:
+    - flag: -config
+      description: A YAML config file that controls oapi-codegen behavior.
+    - flag: -o
+      description: Where to output generated code; stdout is the default.
+    - flag: -package
+      description: The package name for generated code.
+    - flag: -generate
+      default: types,client,server,spec
+      description: Comma-separated list of what to generate.
+    - flag: -include-tags
+      description: Only include operations with the given tags.
+    - flag: -exclude-tags
+      description: Exclude operations tagged with the given tags.
+    - flag: -include-operation-ids
+      description: Only include operations with the given operationIds.
+    - flag: -exclude-operation-ids
+      description: Exclude operations with the given operationIds.
+    - flag: -exclude-schemas
+      description: Comma-separated list of schemas excluded from generation.
+    - flag: -templates
+      description: Path to a directory containing user templates.
+    - flag: -import-mapping
+      description: Dict from external reference to Go package path.
+    - flag: -response-type-suffix
+      description: Suffix used for response types.
+    - flag: -alias-types
+      description: Alias type declarations where possible.
+    - flag: -old-config-style
+      description: Use the older style config file format.
+    - flag: -output-config
+      description: Output a configuration file reflecting current settings.
+    - flag: -version
+      description: Print version and exit.
+    - flag: -help, -h
+      description: Show help and exit.
+generators:
+  servers:
+    - chi-server
+    - echo-server
+    - echo5-server
+    - fiber-server
+    - fiber-v3-server
+    - gin-server
+    - gorilla-server
+    - iris-server
+    - std-http-server
+  modifiers:
+    - strict-server
+  other:
+    - client
+    - models
+    - embedded-spec
+    - server-urls
+flows:
+  - name: Generate a typed Go client from an OpenAPI document
+    steps:
+      - write a cfg.yaml with package + generate.client + generate.models
+      - run oapi-codegen -config cfg.yaml openapi.yaml
+      - import the generated ClientWithResponses in application code
+  - name: Generate a net/http server with request validation
+    steps:
+      - set generate.std-http-server + generate.models (optionally strict-server)
+      - run oapi-codegen -config cfg.yaml openapi.yaml
+      - wrap the mux with github.com/oapi-codegen/nethttp-middleware for validation
+  - name: Split a large spec across multiple Go packages
+    steps:
+      - author per-package configs with import-mapping entries per external $ref
+      - run oapi-codegen once per package config
+  - name: Reshape a third-party spec before generation
+    steps:
+      - author an OpenAPI Overlay 1.0.0 document
+      - point output-options.overlay.path at it in the config
+      - run oapi-codegen; the overlay is applied before code generation
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+    - url: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/v2.8.0/cmd/oapi-codegen/oapi-codegen.go
+      http_status: 200
+    - url: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/main/docs/configuration.md
+      http_status: 200

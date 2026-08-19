@@ -1,0 +1,134 @@
+generated: '2026-08-06'
+method: searched
+source: https://proxy.golang.org/ (Go module proxy @latest) + https://github.com/oapi-codegen
+notes: >-
+  oapi-codegen publishes exclusively to the Go module ecosystem — there is no npm,
+  PyPI, Maven, NuGet, RubyGems, Packagist or crates.io distribution. Versions below
+  are the @latest resolved from the Go module proxy on the generated date. All modules
+  live in the oapi-codegen GitHub organisation and are first-party.
+registries_checked:
+  - registry: go-modules
+    url: https://proxy.golang.org/
+    result: 11 first-party modules resolved
+  - registry: npm
+    result: none
+  - registry: pypi
+    result: none
+  - registry: maven-central
+    result: none
+  - registry: nuget
+    result: none
+  - registry: rubygems
+    result: none
+  - registry: packagist
+    result: none
+  - registry: crates.io
+    result: none
+packages:
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/oapi-codegen/v2
+    version: v2.8.0
+    released: '2026-07-17'
+    url: https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2
+    install: go get github.com/oapi-codegen/oapi-codegen/v2
+    role: generator (CLI + importable codegen library)
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/runtime
+    version: v1.6.0
+    released: '2026-07-16'
+    url: https://pkg.go.dev/github.com/oapi-codegen/runtime
+    install: go get github.com/oapi-codegen/runtime
+    role: runtime support library imported by generated client/server code
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/nullable
+    version: v1.2.0
+    released: '2026-06-22'
+    url: https://pkg.go.dev/github.com/oapi-codegen/nullable
+    install: go get github.com/oapi-codegen/nullable
+    role: >-
+      Nullable[T] type distinguishing absent / null / set values in JSON bodies
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/testutil
+    version: v1.1.0
+    released: '2023-11-14'
+    url: https://pkg.go.dev/github.com/oapi-codegen/testutil
+    install: go get github.com/oapi-codegen/testutil
+    role: test helpers for exercising generated servers
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/nethttp-middleware
+    version: v1.2.0
+    released: '2026-07-19'
+    url: https://pkg.go.dev/github.com/oapi-codegen/nethttp-middleware
+    install: go get github.com/oapi-codegen/nethttp-middleware
+    role: request validation middleware for net/http (ServeMux)
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/echo-middleware
+    version: v1.1.0
+    released: '2026-07-19'
+    url: https://pkg.go.dev/github.com/oapi-codegen/echo-middleware
+    install: go get github.com/oapi-codegen/echo-middleware
+    role: request validation middleware for Echo v4
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/echo-v5-middleware
+    version: v0.1.1
+    released: '2026-07-19'
+    url: https://pkg.go.dev/github.com/oapi-codegen/echo-v5-middleware
+    install: go get github.com/oapi-codegen/echo-v5-middleware
+    role: request validation middleware for Echo v5
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/gin-middleware
+    version: v1.1.0
+    released: '2026-07-19'
+    url: https://pkg.go.dev/github.com/oapi-codegen/gin-middleware
+    install: go get github.com/oapi-codegen/gin-middleware
+    role: request validation middleware for Gin
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/fiber-middleware
+    version: v1.1.0
+    released: '2026-07-19'
+    url: https://pkg.go.dev/github.com/oapi-codegen/fiber-middleware
+    install: go get github.com/oapi-codegen/fiber-middleware
+    role: request validation middleware for Fiber v2
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/fiber-v3-middleware
+    version: v0.1.1
+    released: '2026-07-19'
+    url: https://pkg.go.dev/github.com/oapi-codegen/fiber-v3-middleware
+    install: go get github.com/oapi-codegen/fiber-v3-middleware
+    role: request validation middleware for Fiber v3
+    official: true
+  - language: go
+    registry: go-modules
+    name: github.com/oapi-codegen/iris-middleware
+    version: v1.1.0
+    released: '2026-07-19'
+    url: https://pkg.go.dev/github.com/oapi-codegen/iris-middleware
+    install: go get github.com/oapi-codegen/iris-middleware
+    role: request validation middleware for Iris
+    official: true
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+    - url: https://proxy.golang.org/github.com/oapi-codegen/oapi-codegen/v2/@latest
+      http_status: 200
+    - url: https://api.github.com/orgs/oapi-codegen/repos
+      http_status: 200

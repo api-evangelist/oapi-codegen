@@ -1,0 +1,60 @@
+# oapi-codegen
+
+> oapi-codegen is an Apache-2.0 licensed Go code generator that turns OpenAPI 3.0
+> and 3.1 documents into Go types, HTTP clients, and server boilerplate for Chi,
+> Echo (v4 and v5), Fiber (v2 and v3), Gin, Gorilla/Mux, Iris, and the standard
+> library net/http router. It is configured with a YAML file validated by a
+> published JSON Schema; command-line flags are maintained for backward
+> compatibility only. It is a specification consumer with no hosted API of its own.
+
+generated: 2026-08-06
+method: generated
+source: API Evangelist profile — https://github.com/api-evangelist/oapi-codegen
+
+## Project
+
+- [Repository](https://github.com/oapi-codegen/oapi-codegen): source, README, and the full usage reference
+- [GitHub organisation](https://github.com/oapi-codegen): generator, runtime, nullable, testutil, and the per-framework validation middlewares
+- [Releases](https://github.com/oapi-codegen/oapi-codegen/releases): SemVer releases with hand-written notes; current v2.8.0 (2026-07-17)
+- [Issues](https://github.com/oapi-codegen/oapi-codegen/issues): bug reports and feature requests
+- [Discussions](https://github.com/oapi-codegen/oapi-codegen/discussions): support channel and roadmap conversation
+- [Governance](https://github.com/oapi-codegen/governance): contributor ladder, Core Maintainer model, sponsorship
+- [Support model](https://github.com/oapi-codegen/oapi-codegen/blob/main/SUPPORT.md): best-efforts; latest minor release only, no backports
+- [Security policy](https://github.com/oapi-codegen/.github/blob/main/SECURITY.md): coordinated disclosure via GitHub security advisories
+
+## Docs
+
+- [Usage](https://github.com/oapi-codegen/oapi-codegen#usage): YAML config file, go:generate wiring, LSP schema hint
+- [Configuration reference](https://github.com/oapi-codegen/oapi-codegen/blob/main/docs/configuration.md): every setting with its default
+- [OpenAPI extensions](https://github.com/oapi-codegen/oapi-codegen/blob/main/docs/extensions.md): the x-go-type / x-go-name / x-order / x-omitzero vocabulary
+- [Backwards compatibility](https://github.com/oapi-codegen/oapi-codegen#backwards-compatibility): what SemVer covers and what is unstable
+- [Server guides](https://github.com/oapi-codegen/oapi-codegen/tree/main/docs): chi, echo, echo5, fiber, fiber-v3, gin, gorilla, iris, stdhttp
+- [GoDoc](https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2/pkg/codegen): Configuration, GenerateOptions, CompatibilityOptions, OutputOptions
+
+## Specs
+
+- [Configuration JSON Schema](https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/v2.8.0/configuration-schema.json): JSON Schema draft-07, pin to the version you generate with
+
+## Install
+
+- `go get -tool github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen` — recommended, source-tracked
+- `go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest`
+- Generated code additionally requires `github.com/oapi-codegen/runtime` v1.6.0 or newer
+- Go 1.25 or newer is required as of v2.8.0
+
+## API Evangelist artifacts
+
+- [Packages](https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/packages/oapi-codegen-packages.yml)
+- [CLI surface](https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/cli/oapi-codegen-cli.yml)
+- [Changelog](https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/changelog/oapi-codegen-changelog.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/lifecycle/oapi-codegen-lifecycle.yml)
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/conformance/oapi-codegen-conformance.yml)
+- [Extension vocabulary](https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/vocabulary/oapi-codegen-openapi-extensions.yml)
+- [Vulnerability disclosure](https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/security/oapi-codegen-vulnerability-disclosure.yml)
+- [Configuration JSON Schema (mirror)](https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/json-schema/oapi-codegen-configuration-schema.json)
+
+## Not applicable
+
+- No hosted API, base URL, or developer portal — the deliverable is a binary and Go modules
+- No OAuth scopes, authentication profile, rate limits, sandbox, or status page
+- No AsyncAPI, MCP server, or A2A agent card published (probed 2026-08-06, all missed)

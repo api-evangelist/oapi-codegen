@@ -1,0 +1,71 @@
+generated: '2026-08-06'
+method: searched
+source: https://github.com/oapi-codegen/oapi-codegen/blob/main/SUPPORT.md
+scope: >-
+  oapi-codegen is a distributed open source code generator, not a hosted service.
+  Lifecycle here is the release/support model of the software artifact, not an
+  uptime or endpoint lifecycle. There is no hosted API and therefore no status page
+  and no SLA — recorded as absent rather than unknown.
+versioning:
+  scheme: semver
+  current: v2.8.0
+  major_line: v2 (Go module path .../oapi-codegen/v2)
+  docs: https://github.com/oapi-codegen/oapi-codegen#backwards-compatibility
+  stability:
+    stable:
+      - generated code (SemVer applies primarily here)
+      - the command-line interface
+      - the configuration file format
+    unstable:
+      - importable pkg/ surface beyond Generate and its Configuration
+      - user template overrides (inputs and contexts drift between releases)
+support:
+  policy_url: https://github.com/oapi-codegen/oapi-codegen/blob/main/SUPPORT.md
+  model: best-efforts, maintained by Core Maintainers outside of their day jobs
+  supported_versions: latest minor release only
+  backports: none (security patches may be backported case-by-case)
+  toolchain_minimum: Go 1.25 (as of v2.8.0)
+  toolchain_policy: >-
+    The project deliberately resists bumping the `go` directive because
+    source-tracked installation propagates the requirement to every consumer; no
+    `toolchain` directive is mandated.
+deprecation:
+  policy_url: https://github.com/oapi-codegen/oapi-codegen#backwards-compatibility
+  approach: >-
+    Breaking behaviour changes are shipped with a named `compatibility:` option
+    that restores the previous behaviour, rather than a timed sunset. Deprecated
+    configuration keys remain readable and are annotated in the configuration
+    reference (e.g. compatibility.circular-reference-limit — "deprecated: no
+    longer used").
+  deprecated_surfaces:
+    - surface: command-line flags
+      status: deprecated
+      note: >-
+        "While some command line options are supported, they should be considered
+        deprecated, we just maintain them for backward compatibility, but we're not
+        extending them." — README, Usage.
+      replacement: YAML configuration file
+    - surface: compatibility.circular-reference-limit
+      status: deprecated
+      note: no longer used
+    - surface: output-options.yaml-tags
+      status: superseded
+      replacement: output-options.struct-tags (a `yaml` entry takes precedence)
+  spec_extension: x-deprecated-reason (emits a GoDoc `Deprecated:` marker on the generated type)
+status_page: null
+sla: null
+governance:
+  url: https://github.com/oapi-codegen/governance
+  model: Core Maintainer model; only Core Maintainers may review, merge, and release
+  sponsorship:
+    - https://github.com/sponsors/oapi-codegen
+    - https://tidelift.com/funding/github/go/github.com%2Foapi-codegen%2Foapi-codegen%2Fv2
+    - https://opencollective.com/oapi-codegen
+release_history: changelog/oapi-codegen-changelog.yml
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+    - url: https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/main/SUPPORT.md
+      http_status: 200
+    - url: https://raw.githubusercontent.com/oapi-codegen/governance/main/README.md
+      http_status: 200
