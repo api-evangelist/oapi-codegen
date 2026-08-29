@@ -5,6 +5,17 @@ description: >-
   boilerplate from OpenAPI 3.0 and 3.1 specifications with support for Echo, Chi,
   Gin, Gorilla/Mux, Iris, Fiber, and the standard library net/http router.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -75,6 +86,8 @@ apis:
       - type: License
         url: https://github.com/oapi-codegen/oapi-codegen/blob/master/LICENSE
 common:
+  - type: ContributionGuide
+    url: https://github.com/oapi-codegen/oapi-codegen/blob/main/CONTRIBUTING.md
   - type: Website
     url: https://github.com/oapi-codegen/oapi-codegen
   - type: Documentation
