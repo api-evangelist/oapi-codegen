@@ -6,15 +6,20 @@ description: >-
   Gin, Gorilla/Mux, Iris, Fiber, and the standard library net/http router.
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: unknown
+  model: self-hosted
+  license: Apache-2.0
+  license_evidence:
+    repo: oapi-codegen/oapi-codegen
+    spdx: Apache-2.0
+    stars: 8593
+  open_source: true
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -38,6 +43,7 @@ tags:
   - OpenAPI
   - SDK
   - Tooling
+  - SDK Generation
 tags_raw:
   - Code Generation
   - Developer Tools
@@ -45,6 +51,7 @@ tags_raw:
   - OpenAPI
   - SDKs
   - Tooling
+  - SDK Generation
 url: >-
   https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/apis.yml
 created: '2026-03-25'
