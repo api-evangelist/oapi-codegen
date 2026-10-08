@@ -93,6 +93,12 @@ apis:
       - type: License
         url: https://github.com/oapi-codegen/oapi-codegen/blob/master/LICENSE
 common:
+  - type: Plans
+    url: plans/oapi-codegen-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/oapi-codegen-rate-limits.yml
+  - type: FinOps
+    url: finops/oapi-codegen-finops.yml
   - type: ContributionGuide
     url: https://github.com/oapi-codegen/oapi-codegen/blob/main/CONTRIBUTING.md
   - type: Website
