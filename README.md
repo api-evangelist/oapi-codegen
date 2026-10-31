@@ -1,4 +1,4 @@
-# Oapi-Codegen (oapi-codegen)
+# Oapi-Codegen
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,54 +66,111 @@
 
 oapi-codegen is an open source Go code generator that produces client and server boilerplate from OpenAPI 3.0 and 3.1 specifications with support for Echo, Chi, Gin, Gorilla/Mux, Iris, Fiber, and the standard library net/http router.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/oapi-codegen/refs/heads/main/apis.yml)
+**Areas:** Code Generation · Developer Tools · Go · OpenAPI · SDK · Tooling · SDK Generation
 
-## Scope
+## Oapi-Codegen on APIs.io
 
-- **Type:** Index
-- **Position:** Producer
-- **Access:** Open Source
+Everything profiled for Oapi-Codegen is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/oapi-codegen/](https://apis.io/providers/oapi-codegen/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Code Generation
-- Developer Tools
-- Go
-- OpenAPI
-- SDKs
-- Tooling
+- [Oapi-Codegen](https://apis.io/apis/oapi-codegen/oapi-codegen/) — Command-line tool and Go library that converts OpenAPI 3.0 and 3.1 specifications into Go server-side, client-side, and HTTP model code with support for…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-25
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### JSON Schema (1)
 
-### Oapi-Codegen
+The data models the API reads and writes.
 
-Command-line tool and Go library that converts OpenAPI 3.0 and 3.1 specifications into Go server-side, client-side, and HTTP model code with support for multiple Go web frameworks.
+- [Oapi Codegen Configuration](https://apis.io/schemas/oapi-codegen/oapi-codegen-configuration/)
 
-- **Human URL:** https://github.com/oapi-codegen/oapi-codegen
+#### Security (1)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://github.com/oapi-codegen/oapi-codegen#readme)
-- [Getting Started](https://github.com/oapi-codegen/oapi-codegen#install)
-- [Source Code](https://github.com/oapi-codegen/oapi-codegen)
-- [GoDoc Reference](https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2/pkg/codegen)
-- [Configuration Schema](https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/v2.7.0/configuration-schema.json)
-- [Releases](https://github.com/oapi-codegen/oapi-codegen/releases)
-- [Issues](https://github.com/oapi-codegen/oapi-codegen/issues)
-- [License](https://github.com/oapi-codegen/oapi-codegen/blob/master/LICENSE)
+- [Oapi Codegen Vulnerability Disclosure](https://apis.io/security/oapi-codegen/oapi-codegen-vulnerability-disclosure/)
 
-## Common Properties
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Oapi Codegen Plans Pricing](https://apis.io/plans/oapi-codegen/oapi-codegen-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Oapi Codegen Rate Limits](https://apis.io/rate-limits/oapi-codegen/oapi-codegen-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Oapi Codegen Finops](https://apis.io/finops/oapi-codegen/oapi-codegen-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://github.com/oapi-codegen/oapi-codegen)
 - [Documentation](https://github.com/oapi-codegen/oapi-codegen#readme)
-- [GitHub Organization](https://github.com/oapi-codegen)
-- [GoDoc](https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2)
+- [Getting started](https://github.com/oapi-codegen/oapi-codegen#install)
+- [API reference](https://pkg.go.dev/github.com/oapi-codegen/oapi-codegen/v2/pkg/codegen)
+- [Support](https://github.com/oapi-codegen/oapi-codegen/discussions)
+- [Security](https://github.com/oapi-codegen/.github/blob/main/SECURITY.md)
+- [GitHub](https://github.com/oapi-codegen)
 
-## Maintainers
+## API Evangelist rating
 
-- **Kin Lane** - kin@apievangelist.com
+**Kin Score 31.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 7.2 |
+| Contract governance | 33.3 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/oapi-codegen/](https://apis.io/providers/oapi-codegen/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Oapi-Codegen: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/oapi-codegen/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
